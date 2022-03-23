@@ -34,3 +34,6 @@ export const SingleProductList = () => {
 };
 
 export default SingleProductList
+
+
+// all action are working on this page
