@@ -18,3 +18,5 @@ export const sortHighToLow = () => ({
     type: SORT_HIGH_TO_LOW,
     
 })
+
+// all action are working

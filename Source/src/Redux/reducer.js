@@ -25,3 +25,5 @@ export const Reducer = (state = initState, {type, payload})=>{
             return { ...state }
     }
 }
+
+// all reducers are working
