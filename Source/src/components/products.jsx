@@ -2,11 +2,11 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getProductsReq, getProductsSuccess } from "../Redux/actions";
+import { GETPRODUCTREQ, GETProductsSuccess } from "../Redux/actions";
 import "./Products.css"
 export const Products = () => {
 
-  const {products, isLoading} = useSelector((state)=>({
+  const {products} = useSelector((state)=>({
       products : state.products,
      
   }))
@@ -15,12 +15,12 @@ export const Products = () => {
   
   useEffect(() => {
   
-    dispatch(getProductsReq())
+    dispatch(GETPRODUCTREQ())
     axios("https://movie-fake-server.herokuapp.com/products")
     .then((res)=>{
       console.log(res.data)
       
-    dispatch(getProductsSuccess(res.data))
+    dispatch(GETProductsSuccess(res.data))
     })
 
 
@@ -42,7 +42,11 @@ export const Products = () => {
       
       <div className="products-list">
        {products[0]?.map((e)=>{
-         return <Link key={e.id} className="Link" to={`/products/${e.id}`}><div className="card" >
+         return <Link key={e.id}
+          className="Link" 
+         to={`/products/${e.id}`}>
+           <div className="card" >
+       
          <img src={e.image} alt="" />
           <h4>Brand: {e.brand}</h4>
          <p>Price: {e.price} /- Rs</p>
@@ -54,4 +58,3 @@ export const Products = () => {
    );
 };
 
-// all action are working on this page spically for function 
