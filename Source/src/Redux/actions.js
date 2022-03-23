@@ -1,34 +1,20 @@
-import { GET_PRODUCTDATA_ERROR, GET_PRODUCYDATA_SUCCESS, GET_PRODUCTDATA_LOADING, SORTPRODUCT, GET_PRODUCTDATA_REQUEST } from "./actionTypes";
+import { GET_PRO_FAILURE, GET_PRO_REQ, GET_PRO_SUCCESS, SORT_HIGH_TO_LOW, SORT_LOW_TO_HIGH } from "./actionTypes";
 
+export const getProductsReq = () => ({ type : GET_PRO_REQ });
 
-
-export const GET_PRODUCTDATA_REQUEST = () => ({
-    type: GETPRODUCTDATAREQUEST,
+export const getProductsSuccess = (payload) => ({ type : GET_PRO_SUCCESS,
+ payload
+});
+export const getProductsFailure = (message) =>
+ ({ type : GET_PRO_FAILURE,
+    payload : message
 });
 
-// action for get products success
+export const sortLowToHigh = () => ({
+type: SORT_LOW_TO_HIGH,
+})
 
-export const GET_PRODUCYDATA_SUCCESS = (payload) => ({
-    type: GETPRODUCYDATASUCCESS,
-    payload,
-});
-
-// action for get products failure
-
-export const GET_PRODUCTDATA_ERROR = (message) => ({
-    type: GETPRODUCTDATAERROR,
-    payload: message,
-});
-
-// thunk call to fetch products  list
-export const GET_PRODUCTDATA_LOADING = () => ({
-    type: GETPRODUCTDATALOADING,
-
-});
-
-// action object for sort  feature
-
-export const sortProducts = (payload) => ({
-     type : FILTER_GENER,
-  payload,
-});
+export const sortHighToLow = () => ({
+    type: SORT_HIGH_TO_LOW,
+    
+})

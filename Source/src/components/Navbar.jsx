@@ -21,7 +21,7 @@ const links = [
 ];
 export const Navbar = () => {
   return  (
-    //map through the link ad display it in header
+   
     <div className="navbar">
       <div className="mainDiv">
       {links.map((e, i) => {
