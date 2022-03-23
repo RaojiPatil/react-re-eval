@@ -10,7 +10,6 @@ import {
 
 const initState = {
     products:[],
-    sortproduct: [],
     isLoading:false,
     isError:false
 }

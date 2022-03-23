@@ -1,0 +1,21 @@
+
+.card{
+    margin: 25px;
+    text-align: left;
+  
+}
+
+.card img{
+    width: 250px;
+}
+.Link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.products-list{
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 2px;
+    margin:60px 7px;
+    padding: 10px;
+}

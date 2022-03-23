@@ -11,17 +11,22 @@ export const SingleProductList = () => {
    
    useEffect(()=>{
      axios(`https://movie-fake-server.herokuapp.com/products/${id}`)
-     .then((res)=>setData(res.data))
-     .catch((err)=>console.log(err))
+     .then((res)=>
+     setData(res.data)
+     )
+     .catch((err)=>
+     console.log(err)
+     )
    },[])
 
 
   return <>
    {
-        <div style={{marginTop:"30px"}}>
+        <div style={{marginTop:"20px"}}>
         <img src={data.image} alt="" />
-        <h4>Title:{data.title}</h4>
         {<p>brand :{data.brand}</p>}
+        <h4>Title:{data.title}</h4>
+       
         {<p>price: {data.price}</p>}
         </div>
       }

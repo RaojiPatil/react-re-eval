@@ -2,33 +2,33 @@ import { GET_PRODUCTDATA_ERROR, GET_PRODUCYDATA_SUCCESS, GET_PRODUCTDATA_LOADING
 
 
 
-export const getProductsReq = () => ({
-    type: GET_PRODUCTDATA_REQUEST,
+export const GET_PRODUCTDATA_REQUEST = () => ({
+    type: GETPRODUCTDATAREQUEST,
 });
 
 // action for get products success
 
-export const getProductsSuccess = (payload) => ({
-    type: GET_PRODUCYDATA_SUCCESS,
+export const GET_PRODUCYDATA_SUCCESS = (payload) => ({
+    type: GETPRODUCYDATASUCCESS,
     payload,
 });
 
 // action for get products failure
 
-export const getProductsFailure = (message) => ({
-    type: GET_PRODUCTDATA_ERROR,
+export const GET_PRODUCTDATA_ERROR = (message) => ({
+    type: GETPRODUCTDATAERROR,
     payload: message,
 });
 
 // thunk call to fetch products  list
-export const getproductsData = () => ({
-    type: GET_PRODUCTDATA_LOADING,
+export const GET_PRODUCTDATA_LOADING = () => ({
+    type: GETPRODUCTDATALOADING,
 
 });
 
 // action object for sort  feature
 
 export const sortProducts = (payload) => ({
-    type : SORTPRODUCT,
-    payload
+     type : FILTER_GENER,
+  payload,
 });
