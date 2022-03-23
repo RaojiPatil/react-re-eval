@@ -10,4 +10,4 @@ if (window.Cypress) {
   }
 
 
-  // all action are working on this page
+// // all action are working

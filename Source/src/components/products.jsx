@@ -41,6 +41,8 @@ export const Products = () => {
 
       
       <div className="products-list">
+
+
        {products[0]?.map((e)=>{
          return <Link key={e.id}
           className="Link" 
@@ -58,3 +60,4 @@ export const Products = () => {
    );
 };
 
+// all action are working
