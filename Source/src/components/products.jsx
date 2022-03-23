@@ -2,13 +2,14 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsReq, getproductsData, getProductsSuccess, getProductsFailure, sortProducts } from "../Redux/actions";
+import { Link } from "react-router-dom";
 
 export const Products = () => {
   // to get all products list on component mounts
 
 
-  const {data} = useSelector((state)=>({
-    data : state.data
+  const products = useSelector((state)=>({
+    products : state.products
 }))
 
 
@@ -54,10 +55,20 @@ export const Products = () => {
 
         {/* map throught th products  list and display the results */}
 
-        {data &&
-          data.map(() => {
-            return <div>{/* display the results here */}</div>;
-          })}
+        {products[0]?.map((e)=>{
+         return <div key={e.id} >
+           <div >
+             
+             {<Link style={{textDecoration : "none", color : "Black"}} to={`/products/${e.id}`}>
+               
+              <img src={e.image} alt="" />
+               <h4>Title: {e.brand}</h4>
+               <h4>Title: {e.price}</h4>
+               </Link>}
+           </div>
+           
+         </div>
+       })}
       </div>
     </>
   );

@@ -34,3 +34,5 @@ export const Reducer = (state = initState, { type, payload })=>{
           return state;
       }
 }
+
+export default Reducer
