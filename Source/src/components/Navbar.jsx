@@ -38,3 +38,6 @@ export const Navbar = () => {
   )
  
 };
+
+
+// all action are working on this page

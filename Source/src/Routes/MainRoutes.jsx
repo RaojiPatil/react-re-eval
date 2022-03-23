@@ -17,3 +17,5 @@ export const MainRoutes = ()=>{
         </>
     )
 }
+
+// all routs are working 

@@ -8,3 +8,6 @@ export const store = createStore(Reducer,applyMiddleware(thunk))
 if (window.Cypress) {
     window.store = store
   }
+
+
+  // all action are working on this page
